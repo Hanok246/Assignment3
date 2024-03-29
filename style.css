@@ -1,0 +1,361 @@
+body{
+    background-color: whitesmoke;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.top-part p, .ad-part p{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: #960707;
+}
+
+.top-part img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.overview{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-ovw{
+    width: 30%;
+    text-align: left;
+}
+
+.card-ovw h1, .card-flv h1{
+    border-left: 3px solid #000000;
+    padding-left: 10px;
+    letter-spacing: 3px;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-ovw p{
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image-gallery{
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-gallery img{
+    margin-top: 10px;
+    width: 30%;
+}
+
+.flavours{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25px;
+}
+
+.flavours img{
+    margin-top: 10px;
+    width: 90%;
+}
+
+footer {
+    background-color: rgb(171, 12, 12); /* KitKat red */
+    color: white;
+    text-align: center;
+    padding:0;  
+    font-size: 14px;
+    height: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.nav{
+    background-color: rgb(171, 12, 12);
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav ul li{
+    padding: 15px 30px 15px 30px;
+}
+
+.nav ul li:hover{
+    background: black;
+    transition: 0.15s;
+    border-radius: 16px;
+}
+
+.nav ul li a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#special, #menu{
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#menu:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+    .top-part img{
+        width: 100%;
+    }
+
+    .overview, .image-gallery, .flavours{
+        display: block;
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
+
+    .card-ovw, .image-gallery img, .card-flv{
+        width: 100%;
+    }
+
+    .nav{
+        display: block;
+    }
+
+    .nav ul li a{
+        display: none;
+    }
+
+    .nav ul li{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .nav ul li:hover{
+        background: #38c9b2;
+    }
+
+    #special, #menu{
+        display: block;
+    }
+}
+
+.main{
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 350;
+    text-align: justify;
+    cursor: default;
+}
+
+@media screen and (max-width: 600px){
+    .main{
+        width: 95%;
+    }
+
+    .main p{
+        text-align: left;
+    }
+}
+
+#title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #359ad4;
+    cursor: default;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    position: relative; /* Needed for absolute positioning */
+    background-color: white;
+    width: 30%;
+    box-shadow: 4px 7px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space items evenly vertically */
+}
+
+.container .product-card:nth-child(n+4) {
+    width: 45%; /* Set width for products starting from the fourth one */
+}
+
+@media screen and (max-width: 600px) {
+    .product-card {
+        width: 90%;
+    }
+}
+
+.product-card h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #000000;
+    cursor: default;
+}
+
+.product-card #desc{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: gray;
+    cursor: default;
+}
+
+.product-card #price{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: #c98538;
+    cursor: default;
+}
+
+.product-card #buy-button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    border-style: none;
+    background:rgb(171, 12, 12);
+    color: white;
+    text-transform: uppercase;
+    padding: 7px 15px;
+    font-weight: 50;
+    align-self: center; /* Center horizontally */
+    border-radius: 5px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 50vh;
+}
+
+.product-card img:hover {
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+#buy-button:hover {
+    transform: scale(1.05);
+    transition: 0.15s;
+    cursor: pointer;
+    position: relative;
+}
+@media screen and (max-width: 600px){
+    .container{
+        display: block;
+    }
+
+    .product-card{
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Contact form CSS  */
+.contact_form {
+    width: 90%; /* Use a percentage width */
+    max-width: 400px; /* Optionally set a max-width */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: rgb(171, 12, 12); /* Red background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact_form h3 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.contact_form label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form textarea {
+    width: 95%; /* Use percentage width for input fields */
+    padding: 8px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact_form textarea {
+    height: 100px;
+}
+
+.contact_form input[type="submit"] {
+    background-color: #960707;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.contact_form input[type="submit"]:hover {
+    background-color: #b51212;
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
